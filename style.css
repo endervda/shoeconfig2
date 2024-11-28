@@ -1,0 +1,69 @@
+body {
+  font-family: sans-serif;
+  margin: 0;
+}
+
+.colors {
+  background-color: white;
+  width: 100%;
+  height: 3em;
+  position: absolute;
+  bottom: 0;
+  z-index: 9999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.color {
+  display: inline-block;
+  width: 2em;
+  height: 2em;
+  margin: 0 8px;
+}
+
+.color[data-color="red"] {
+  background-color: red;
+}
+
+.color[data-color="green"] {
+  background-color: green;
+}
+
+.color[data-color="blue"] {
+  background-color: blue;
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+}
+
+h1 {
+  font-size: 2em;
+  margin: 8px 0;
+}
+
+.orderBtn {
+  text-decoration: none;
+  color: black;
+  /* Make it look like a button */
+  display: inline-block;
+  opacity: 1;
+  padding: 8px 16px;
+  border-radius: 4px;
+  margin: 8px;
+  position: fixed;
+  background-color: white;
+  font-weight: bold;
+  bottom: 32px;
+  left: 16px;
+}
+
+p {
+  position: fixed;
+  bottom: 32px;
+  right: 16px;
+  background-color: 0;
+  color: white;
+}
