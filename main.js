@@ -12,7 +12,7 @@ const camera = new THREE.PerspectiveCamera( 75, window.innerWidth / window.inner
 // GLTFLoader
 const loader = new GLTFLoader();
 
-loader.load( 'public/models/untitled.glb', function ( gltf ) {
+loader.load( '/models/untitled.glb', function ( gltf ) {
 	// change material to standard white (.traverse)
 	gltf.scene.traverse((child) => {
 		if (child.isMesh) {
@@ -40,12 +40,12 @@ console.log(camera.position);
 // load cubemap
 const loaderCube = new THREE.CubeTextureLoader();
 const texture = loaderCube.load([
-	'public/textures/px.png',
-	'public/textures/nx.png',
-	'public/textures/py.png',
-	'public/textures/ny.png',
-	'public/textures/pz.png',
-	'public/textures/nz.png',
+	'/textures/px.png',
+	'/textures/nx.png',
+	'/textures/py.png',
+	'/textures/ny.png',
+	'/textures/pz.png',
+	'/textures/nz.png',
 ]);
 scene.background = texture;
 
