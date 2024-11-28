@@ -207,6 +207,30 @@ document.querySelector('.orderBtn').addEventListener('click', () => {
 	alert(message);
 });
 
+// Make it so 1 of 3 materials can be selected from the materials menu (metal, plastic, rubber) if a part is selected then the material is changed
+document.querySelectorAll('.material').forEach((material) => {
+    material.addEventListener('click', (event) => {
+        const dataMaterial = event.target.getAttribute('data-material');
+        if (currentIntersect) {
+            switch (dataMaterial) {
+                case 'metal':
+                    currentIntersect.object.material.metalness = 1;
+                    currentIntersect.object.material.roughness = 0.2;
+                    break;
+                case 'plastic':
+                    currentIntersect.object.material.metalness = 0;
+                    currentIntersect.object.material.roughness = 0.8;
+                    break;
+                case 'rubber':
+                    currentIntersect.object.material.metalness = 0;
+                    currentIntersect.object.material.roughness = 0.2;
+                    break;
+            }
+        }
+    });
+});
+
+
 
 
 

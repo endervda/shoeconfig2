@@ -67,3 +67,22 @@ p {
   background-color: 0;
   color: white;
 }
+
+.materials {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.material {
+  display: inline-block;
+  text-decoration: none;
+  color: black;
+  margin: 8px;
+  background-color: white;
+  border-radius: 4px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
